@@ -1,0 +1,156 @@
+@import "reset";
+@import "var";
+@import "buttons";
+
+@import "navbar";
+@import "banner";
+
+body {
+  @include font();
+  overflow-x: hidden;
+  // background: linear-gradient($primary, $secondary);
+  // height: 100%;
+}
+
+.category {
+  padding: 230px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  // flex-wrap: wrap;
+
+  .item {
+    text-align: center;
+    margin: 0 8rem;
+
+    .fas {
+      font-size: 4.5rem;
+      background: $primary;
+      padding: 2rem;
+      border-radius: 50%;
+      color: #fff;
+      border: 2px solid $primary;
+      cursor: pointer;
+
+      &:hover {
+        background: #fff;
+        border: 2px solid $primary;
+        color: $primary;
+      }
+    }
+  }
+}
+
+.why-choose-us {
+  padding: 300px 0;
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  // text-align: center;
+
+  .text {
+    width: 40%;
+
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 50px;
+    }
+    p {
+      text-align: justify;
+      margin-bottom: 36px;
+    }
+  }
+  .usp {
+    width: 30%;
+    // margin-top: 3rem;
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 10px 10px 10px -6px rgba($secondary, 0.19);
+    }
+  }
+}
+
+.product {
+  padding: 160px 0;
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 0 10%;
+
+    .product-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // width: 500px;
+      img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px -6px rgba($secondary, 0.19);
+      }
+    }
+    .product-details {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      height: 100%;
+      h3 {
+        font-size: 50px;
+      }
+      h3,
+      p,
+      a {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+
+.testimonial {
+  background: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+
+  padding: 160px 0;
+
+  .item {
+    width: 600px;
+    h4 {
+      color: #fff;
+      font-size: 51px;
+    }
+    p {
+      color: #fff;
+    }
+
+    .testimonials {
+      margin-top: 5rem;
+      .item {
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 80px;
+          width: 80px;
+          border: 5px solid $secondary;
+          border-radius: 50%;
+        }
+        p {
+          margin-left: 1rem;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+@import "mobile";

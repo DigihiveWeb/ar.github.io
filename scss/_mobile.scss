@@ -1,0 +1,75 @@
+/* ------------------------------- // tab view ------------------------------ */
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 80%;
+    // background: #000;
+  }
+}
+
+/* ----------------------------- // mobile view ----------------------------- */
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    overflow: hidden !important;
+    position: absolute;
+    right: 0;
+    height: 88vh;
+    top: 11.5vh;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in;
+
+    li {
+      opacity: 0;
+    }
+    a {
+      color: #fff;
+    }
+  }
+
+  .burger {
+    display: block;
+    div {
+      background: #000;
+    }
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggle {
+    .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .line2 {
+      opacity: 0;
+    }
+
+    .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+}
