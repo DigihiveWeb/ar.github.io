@@ -10,6 +10,31 @@
 /* ----------------------------- // mobile view ----------------------------- */
 
 @media screen and (max-width: 768px) {
+  .btn {
+    background: #4e4c4c;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    position: relative;
+    outline: none;
+    padding: 4px 17px 4px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+    text-align: center;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 6px;
+
+    transition: color 0.2s linear, background-color 0.2s linear;
+  }
+
   body {
     overflow-x: hidden;
   }
@@ -18,21 +43,23 @@
     overflow: hidden !important;
     position: absolute;
     right: 0;
-    height: 88vh;
-    top: 11.5vh;
-    background-color: $primary;
+    height: 92vh;
+    top: 18%;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
     transform: translateX(100%);
     transition: all 0.5s ease-in;
+    display: none !important;
 
     li {
       opacity: 0;
+      margin-left: 0.5rem;
     }
     a {
-      color: #fff;
+      color: $primary;
     }
   }
 
@@ -45,6 +72,8 @@
 
   .nav-active {
     transform: translateX(0%);
+    display: block !important;
+    transition: all 0.5s ease-in;
   }
 
   @keyframes navLinkFade {
@@ -70,6 +99,68 @@
 
     .line3 {
       transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+
+  .category {
+    flex-direction: column;
+    padding: 90px 0;
+
+    .item {
+      margin: 0.8rem 0;
+
+      .fas {
+        font-size: 3rem;
+        padding: 1.5rem;
+      }
+    }
+  }
+
+  .why-choose-us {
+    flex-direction: column;
+    padding: 100px 10%;
+
+    .text {
+      width: 100%;
+      order: 2;
+      h3 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1rem;
+        text-align: left;
+      }
+    }
+    .usp {
+      order: 1;
+      width: 100%;
+      margin: 2rem 0;
+    }
+  }
+
+  .product {
+    .row {
+      grid-template-columns: 1fr;
+      .product-img {
+        order: 1;
+      }
+      .product-details {
+        order: 2;
+      }
+    }
+  }
+
+  .testimonial {
+    padding: 100px 0;
+    .item {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  footer {
+    .row {
+      grid-template-columns: 1fr;
     }
   }
 }
